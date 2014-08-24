@@ -1,0 +1,10 @@
+{
+  "paths": [
+    "src/chestplate.coffee",
+    "src/base_model.coffee",
+    "src/base_presenter.coffee",
+    "src/base_view.coffee"
+  ],
+  "out": "dist/chestplate.min.js",
+  "uglify": true
+}

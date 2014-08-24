@@ -1,0 +1,28 @@
+{
+  "name": "chestplate",
+  "version": "0.0.1",
+  "authors": [
+    "Andrew Berls <andrew@sutro-research.com>"
+  ],
+  "description": "A small set of helpers for Backbone",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sutro-research/chestplate.js"
+  },
+  "main": "dist/chestplate.js",
+  "keywords": [
+    "backbone"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone" : "~1.0",
+    "jquery"   : "~1.9.1",
+  }
+}
