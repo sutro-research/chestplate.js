@@ -21,10 +21,8 @@ class Chestplate.BaseModel extends Backbone.Model
   toJSON: ->
     data = {}
     for key, value of @persistedAttributes()
-      if _.isFunction(value)
-        data[key] = @get(key)
-      else
-        data[key] = value
+      data[key] = if _.isFunction(value) then @get(key) else value
+      
     if @modelName? && @wrapJSON == true
       json = {}
       json[@modelName] = data
