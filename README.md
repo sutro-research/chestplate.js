@@ -16,8 +16,10 @@ class ExampleModel extends Chestplate.BaseModel
   
   
 model = new ExampleModel()
-model.set(title: "Example Title")
-model.set(finishedEditing: true)
+model.set(
+  title: "Example Title"
+  finishedEditing: true
+)
 
 model.persistedAttributes() # => { title: "Example Title" }
 ```
@@ -58,11 +60,7 @@ class Order extends Chestplate.BaseModel
   }
 
 
-order = new Order()
-order.set(
-  quantity: 2
-  price: 10
-)
+order = new Order(quantity: 2, price: 10)
 order.get('total') # => 20
 order.toJSON() # => { quantity: 2, price: 10, total: 20 }
 ```
@@ -80,6 +78,11 @@ Chestplate supports simple data binding of model attributes to DOM elements such
 
 ```coffeescript
 class Book extends Chestplate.BaseModel
+  defaults: {
+    title: ''
+    coverType: ''
+  }
+
 
 class BookView extends Chestplate.BaseView
   modelBindings:
@@ -115,6 +118,7 @@ Chestplate.BaseView provides a default implementation of `render` that integrate
 ```books/show.jst.ejs
 <div class="book-container">
   <h1><%= model.get('title') %></h1>
+</div>
 ```
 
 ```coffeescript
