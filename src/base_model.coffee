@@ -31,12 +31,3 @@ class Chestplate.BaseModel extends Backbone.Model
       json
     else
       data
-
-
-  save: (options={}) ->
-    success = options.success || ->
-    error   = options.error || ->
-    super @persistedAttributes(), {
-      success: (model, response) -> success(model, response)
-      error:   (model, response) -> error(model, response)
-    }
