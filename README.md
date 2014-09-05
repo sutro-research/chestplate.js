@@ -1,6 +1,6 @@
 # Chestplate.js
 
-A small set of helpers for Backbone.
+A small set of helpers and base classes for Backbone.
 
 ## Chestplate.BaseModel
 
@@ -37,7 +37,7 @@ Notice the nesting of attributes under the "book" key. Instead of overriding `pa
 
 ```coffeescript
 class Book extends Chestplate.BaseModel
-  modelName: "Book"
+  modelName: "book"
   wrapJSON: true
   
   
