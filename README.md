@@ -42,7 +42,7 @@ class Book extends Chestplate.BaseModel
   
   
 book = new Book(title: "Example title")
-book.toJSON() { "book": { "title": "Example title" } }
+book.toJSON() # { "book": { "title": "Example title" } }
 book.fetch() # Will automatically parse nested response key
 ```
 
